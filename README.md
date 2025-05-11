@@ -33,7 +33,7 @@ Simulated sending login data via the HTTP POST method and analyzed how data can 
     <img src="images/login.png" alt="Scan Result" width="600"/>
 
 <b>3. Run Python HTTP Server</b> <br>
-  <img src="images/http.server.png" alt="Scan Result" width="600"/> <br>
+    <img src="images/http.server.png" alt="Scan Result" width="600"/> <br>
   - The server will be active at: http://localhost:8080
   - Leave the terminal open (server remains active)
 
@@ -65,21 +65,21 @@ Simulated sending login data via the HTTP POST method and analyzed how data can 
 
 There are several ways to view the analysis results.
 1. Results that can be seen immediately when clicking on the network packet and will appear below the network packet screen.
-   <img src="images/1.png" alt="Scan Result" width="600"/> <br>
+   <img src="images/1.jpeg" alt="Scan Result" width="600"/> <br>
    The analysis: <br>
    In the Hypertext Transfer Protocol section, there is some information obtained:
     - 'Origin' points to hhtp://localhost:8080 which is the server.
     - 'Connection: keep-alive' indicates that the server connection is active.
     - 'Referer' refers to the login.html file on the server that is running <br>
     
-   <img src="images/2.png" alt="Scan Result" width="600"/> <br>
+   <img src="images/2.jpeg" alt="Scan Result" width="600"/> <br>
    In the HTML Form URL Encode section, there is username and password information entered on the login form in the browser. <br>
    
    Why can the username and password be seen in Wireshark? <br>
    Because by filling in the login form on HTTP in the browser, which HTTP does not have encryption, unlike HTTPS which has encryption.
    
 2. Results that can be seen by right-clicking on the network packet, then selecting Follow > HTTP Stream
-   <img src="images/full.png" alt="Scan Result" width="600"/> <br>
+   <img src="images/full.jpeg" alt="Scan Result" width="600"/> <br>
    The analysis in this image is the same as above, but in this way the information looks more complete because it is in 1 screen. <br>
    The analysis: <br>
    - The 'User-Agent' shows that the login form is accessed in the Mozilla Firefox browser.
