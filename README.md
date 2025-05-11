@@ -73,7 +73,7 @@ There are several ways to view the analysis results.
     - 'Referer' refers to the login.html file on the server that is running <br>
     
    <img src="images/2.png" alt="Scan Result" width="600"/> <br>
-   In the HTML Form URL Encode section, there is username and password information entered on the login form in the browser. <br>
+   In the HTML Form URL Encoded section, there is username and password information entered on the login form in the browser. <br>
    
    Why can the username and password be seen in Wireshark? <br>
    Because by filling in the login form on HTTP in the browser, which HTTP does not have encryption, unlike HTTPS which has encryption.
