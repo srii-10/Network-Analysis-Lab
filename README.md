@@ -23,31 +23,31 @@ Simulated sending login data via the HTTP POST method and analyzed how data can 
 
 ## Steps
 
-1. Create a folder
+<b>1. Create a folder</b>
   - Create a folder with the terminal that will contain the html files: mkdir simulasi-login
   - Enter the folder: cd simulasi-login
 
-2. Create a login form
+<b>2. Create a login form</b>
   - Create the login form inside the simulasi-login folder: nano login.html
   - Fill in the login.html file: <br>
     <img src="images/login.png" alt="Scan Result" width="600"/>
 
-3. Run Python HTTP Server <br>
+<b>3. Run Python HTTP Server</b> <br>
   <img src="images/http.server.png" alt="Scan Result" width="600"/> <br>
   - The server will be active at: http://localhost:8080
   - Leave the terminal open (server remains active)
 
-4. Run Wireshark
+<b>4. Run Wireshark</b>
   - Run the Wireshark application or from the terminal type: wireshark
   - Then select the loopback interface (lo) <br>
     Why loopback? <br>
     Because the loopback interface is to capture network traffic that is internal, that is, traffic that occurs within the computer itself without involving external networks.
 
-5. Access login form from browser
+<b>5. Access login form from browser</b>
   - Since the web server is up, run this in the browser: http://localhost:8080/simulasi-login/login.html <br>
   - And the login form that has been created in the login.html file will appear.
 
-6. Entering username and password
+<b>6. Entering username and password</b>
   - After the login form appears, enter the original username and password. Here I enter: <br>
     username: admin <br>
     password: 123456 <br>
@@ -55,12 +55,11 @@ Simulated sending login data via the HTTP POST method and analyzed how data can 
   - An 'Error response' will appear. Because the login form is created without validation.
     <img src="images/error-login.png" alt="Scan Result" width="600"/>
 
-7. Capture network packets
+<b>7. Capture network packets</b>
   - Capture network packets with Wireshark already running.
   - Use filters to facilitate customized searches. Here I filtered: http.request.method == “POST” <br>
     <img src="images/capture.png" alt="Scan Result" width="600"/> <br>
-
-  Note: The POST method on Wireshark network packets is an HTTP request method used to send data to a server such as a web form (HTML form).
+    Note: The POST method on Wireshark network packets is an HTTP request method used to send data to a server such as a web form (HTML form).
 
 ### Results and Analysis
 
